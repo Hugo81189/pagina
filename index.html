@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Tienda de Cómputo</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Estilos para el encabezado */
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px; /* Ajusta el padding para el logo */
+            position: fixed; /* Fija el encabezado */
+            top: 0; /* Lo coloca en la parte superior */
+            width: 100%; /* Ocupa todo el ancho */
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+            display: flex; /* Alinea el logo y el título horizontalmente */
+            align-items: center; /* Centra verticalmente los elementos */
+        }
+
+        header img {
+            height: 40px; /* Tamaño del logo */
+            margin-right: 15px; /* Espacio entre el logo y el título */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Estilos para el contenido principal */
+        main {
+            padding: 100px 20px 20px; /* Ajusta el padding superior para evitar que el contenido quede detrás del encabezado */
+            margin-left: 30px; /* Margen izquierdo para separar el contenido del borde */
+            margin-right: 250px; /* Margen derecho para evitar que el contenido se solape con el recuadro fijo */
+        }
+
+        /* Estilos para el recuadro fijo */
+        .recuadro-enlaces {
+            position: fixed; /* Fija el recuadro */
+            top: 80px; /* Lo coloca debajo del encabezado */
+            right: 20px; /* Lo coloca a la derecha con un pequeño margen */
+            width: 200px; /* Ancho del recuadro */
+            background-color: rgb(0, 0, 0);
+            padding: 20px; /* Padding interno */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; /* Bordes redondeados */
+            z-index: 999; /* Asegura que esté por encima del contenido principal */
+        }
+
+        .recuadro-enlaces h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #ffffff;
+        }
+
+        .recuadro-enlaces ul {
+            list-style: none; /* Quita los puntos de la lista */
+            padding: 0;
+        }
+
+        .recuadro-enlaces ul li {
+            margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+        }
+
+        .recuadro-enlaces ul li a {
+            text-decoration: none; /* Quita el subrayado de los enlaces */
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .recuadro-enlaces ul li a:hover {
+            color: #03c7f8; /* Cambia el color al pasar el mouse */
+        }
+
+        main h2 {
+            color: #000000;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        main p {
+            line-height: 1.6;
+        }
+
+        /* Estilos para los productos destacados */
+        .productos {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .producto {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .producto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .producto h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .producto p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .producto .precio {
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Estilos para el carrusel */
+        .carrusel {
+            display: flex;
+            width: 100%; /* Ocupa todo el ancho disponible */
+            height: 400px;
+            overflow: hidden; /* Evita que las imágenes se desborden */
+        }
+
+        .diseño img {
+            width: 0px;
+            flex-grow: 1;
+            object-fit: cover;
+            transition: 0.5s ease;
+            cursor: pointer; /* Cambia el cursor al pasar sobre las imágenes */
+        }
+
+        .diseño img:hover {
+            width: 300px;
+            filter: contrast(120%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>CompuGaming</h1>
+        <img src="images/logocom.PNG">
+    </header>
+
+    <!-- Recuadro fijo a la derecha -->
+    <div class="recuadro-enlaces">
+        <h2>Productos</h2>
+        <ul>
+            <li><a href="audifonos.html" >Audífonos</a></li>
+            <li><a href="laptops.html" >Laptops</a></li>
+            <li><a href="mouses.html" >Mouses</a></li>
+            <li><a href="teclados.html">Teclados</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Descripción de la tienda -->
+        <section>
+            <h2>Lo mejor en equipo de cómputo</h2>
+        </section>
+
+        <!-- Carrusel de imágenes -->
+        <section>
+            <div class="diseño">
+                <div class="carrusel">
+                    <img src="images/audi.jpg" data-link="audifonos.html" title="Audífonos">
+                    <img src="images/lapto.jpg" data-link="laptops.html">
+                    <img src="images/mouse.jpg" data-link="mouses.html">
+                    <img src="images/mecanico.jpg" data-link="teclados.html">
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos destacados -->
+        <section>
+            <h2>Productos Destacados</h2>
+            <div class="productos">
+                <div class="producto">
+                    <img src="images/laptop.png" alt="Laptop Gamer">
+                    <h3>Laptop Gamer</h3>
+                    <p>Potente laptop para gaming con tarjeta gráfica dedicada.</p>
+                    <p class="precio">$18,200.00</p>
+                </div>
+                <div class="producto">
+                    <img src="images/monitor.png" alt="Monitor 4K">
+                    <h3>Monitor 4K</h3>
+                    <p>Monitor ultra HD para una experiencia visual increíble.</p>
+                    <p class="precio">$4,000.00</p>
+                </div>
+                <div class="producto">
+                    <img src="images/teclado.png" alt="Teclado Mecánico">
+                    <h3>Teclado Mecánico</h3>
+                    <p>Teclado mecánico con retroiluminación RGB.</p>
+                    <p class="precio">$800.00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section>
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Reparación de laptops y computadoras.</li>
+                <li>Instalación de software y hardware.</li>
+                <li>Venta de componentes y accesorios.</li>
+                <li>Asesoría técnica personalizada.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Tienda de Cómputo. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para manejar los clics en el carrusel -->
+    <script>
+        // Selecciona todas las imágenes del carrusel
+        const imagenesCarrusel = document.querySelectorAll('.diseño img');
+    
+        // Añade un evento de clic a cada imagen
+        imagenesCarrusel.forEach(imagen => {
+            imagen.addEventListener('click', () => {
+                // Obtiene el enlace asociado a la imagen
+                const link = imagen.getAttribute('data-link');
+                // Redirige a la página en la misma pestaña
+                window.location.href = link;
+            });
+        });
+    </script>
+    
+</body>
+</html>
